@@ -1,7 +1,7 @@
 #include <stdio.h>
 /*
-* main - print the string in the put function
-* Description: using the main function
+*main - function is the entry point of the program.
+*Description: It displays a simple message on the console and returns 0.
 */
 int main(void)
 {
