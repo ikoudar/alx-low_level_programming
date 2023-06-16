@@ -1,7 +1,7 @@
 #!/bin/bash
 #include <stdio.h>
-int main (avoid)
+int main(avoid)
 {
-puts("\"Programming is like building a multilingual puzzle\n")
+puts("\"Programming is like building a multilingual puzzle");
 return (0);
 }
