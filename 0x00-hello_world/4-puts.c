@@ -1,7 +1,6 @@
 #include <stdio.h>
 /*
-*main - function is the entry point of the program.
-*Description: It displays a simple message on the console and returns 0.
+* main: function is the entry point of the program
 */
 int main(void)
 {
