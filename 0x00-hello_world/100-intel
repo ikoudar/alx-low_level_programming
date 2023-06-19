@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 gcc -S -o output.s $CFILE
+=======
+gcc -S -masm=intel "$CFILE" -o main.c main.s
+>>>>>>> 80789b5ad2f762f4d946e58bd96ab2077e6c6711
