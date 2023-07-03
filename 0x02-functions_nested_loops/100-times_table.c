@@ -1,9 +1,11 @@
 #include "main.h"
 #include <stdio.h>
-
+#include <time.h>
 /**
-  *
-  *
+  *print_times_table- function that prints the n times table,
+  *starting with 0.
+  *@n: number of repetition.
+  *Return: 0.
 */
 
 void print_times_table(int n)
@@ -15,13 +17,15 @@ void print_times_table(int n)
 		return;
 	}
 
-	for (a = 0; a <= n; a++)
+	for (a = 0; a <= 10; a++)
 	{
-		for (b = 0; b <= n; b++)
+		for (b = 0; b <= 10; b++)
 		{
-			printf("%d\t", a *b);
+			printf("%d\t", a * b);
 		}
 
 		printf("\n");
 	}
+
+	return (0);
 }
