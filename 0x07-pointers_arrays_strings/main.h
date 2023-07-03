@@ -19,3 +19,6 @@ void print_diagsums(int *a, int size);
 int main(void);
 
 void simple_print_buffer(char *buffer, unsigned int size);
+
+
+
