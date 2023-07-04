@@ -12,7 +12,7 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int length = 0;
 	int a = 1;
-	int i =0;
+	int i = 0;
 
 	while (*s != '0' && a)
 	{
@@ -23,6 +23,7 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				length++;
 				a = 1;
+				break;
 			}
 		}
 		if (a)
