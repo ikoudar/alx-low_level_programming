@@ -20,5 +20,5 @@ int main(void);
 
 void simple_print_buffer(char *buffer, unsigned int size);
 
-
+void set_string(char **s, char *to);
 
