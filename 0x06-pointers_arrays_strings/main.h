@@ -17,3 +17,5 @@ char *string_toupper(char *);
 char *cap_string(char *);
 
 void print_array(int *a, int n);
+
+
