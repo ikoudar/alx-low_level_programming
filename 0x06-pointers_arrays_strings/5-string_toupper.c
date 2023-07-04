@@ -1,22 +1,22 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- *string_toupper- converts all lowercase letters in a string to uppercase.
+ *string_toupper- function that changes all lowercase letters.
  *
- *param: the string to convert.
- *return: lowercase letters converted to uppercase.
-*/
-
+ *
+ *Return:str
+ */
 char *string_toupper(char *)
 {
-	char *p = str;
+	int i = 0;
 
-	while (*p != '\0')
+	while (str[i] != '\0')
 	{
-		if (islower(*p))
+		if (str[i] >= 'a' && str[i] <= 'Z')
 		{
-			*p = toupper(*p);
+			str[i] = str[i] - 32;
 		}
-		p++;
+		i++;
 	}
+	return (str);
 }
