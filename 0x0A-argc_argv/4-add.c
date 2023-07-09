@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
 	int i;
 	int j;
-	int result;
+	int result = 0;
 
 	if (argc < 2)
 	{
@@ -28,13 +28,15 @@ int main(int argc, char *argv[])
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
 			if (!isdigit(argv[i][j]))
-					{
-					printf("Error\n");
-					return (1);
-					}
-					result = result * 10 + (argv[i][j] - '0');
+			{
+				printf("Error\n");
+				return (1);
+			}
+
+			result = result * 10 + (argv[i][j] - '0');
 		}
 		sum += result;
+		result = 0;
 	}
 	printf("%d\n", sum);
 
