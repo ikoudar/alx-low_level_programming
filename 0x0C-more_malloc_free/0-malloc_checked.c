@@ -17,8 +17,14 @@ void *malloc_checked(unsigned int b)
 
 	if (ptr == NULL)
 	{
+		const char *msg = "memory allocation failed\n";
+
+		while (*msg)
+		{
+			putchar(*msg++);
+		}
+
 		exit(98);
 	}
-
 	return (ptr);
 }
