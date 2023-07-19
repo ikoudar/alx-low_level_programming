@@ -3,13 +3,13 @@
 #include <stdio.h>
 
 /**
- * print_dog- function that print dog.
- * struct my_struct - Short description
- * @name: First member
- * @age: Second member
- * @owner: Third member
+ * print_dog- function that print.
  *
- * Description: Longer description
+ * struct my_struct - Short description
+ * @d->name: First member
+ * @d->age: Second member
+ * @d->owner: Third member
+ * @d: struct dog.
 */
 
 void print_dog(struct dog *d)
