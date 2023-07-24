@@ -1,3 +1,6 @@
+#ifndef MAIN_H
+#define MAIN_H
+
 int main(void);
 
 char *_strcat(char *dest, char *src);
@@ -20,4 +23,8 @@ char *cap_string(char *);
 
 void print_array(int *a, int n);
 
+char *leet(char *);
 
+char h(char s);
+
+#endif
