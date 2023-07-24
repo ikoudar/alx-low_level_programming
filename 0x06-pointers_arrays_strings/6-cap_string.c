@@ -28,9 +28,9 @@ char *cap_string(char *str)
 {
 	int abc = 0;
 
-	while (str[abc])
+	while (str[++abc])
 	{
-		while ((str[abc] >= 'a') && (str[abc] <= 'Z'))
+		while (!(str[abc] >= 'a') && (str[abc] <= 'Z'))
 			abc++;
 
 		if (str[abc - 1] == ' ' ||
