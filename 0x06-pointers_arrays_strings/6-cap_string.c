@@ -7,8 +7,6 @@
   *Return: 0
 */
 
-
-
 int _strlen( char *s)
 {
 	int len = 0;
@@ -35,6 +33,8 @@ char *cap_string(char *)
 			abc++;
 
 		if (str[abc - 1] == ' ' ||
+				str[abc - 1] == '\t' ||
+				str[abc - 1] == '\n' ||
 				str[abc - 1] == ',' ||
 				str[abc - 1] == ';' ||
 				str[abc - 1] == '.' ||
@@ -45,22 +45,7 @@ char *cap_string(char *)
 				str[abc - 1] == ')' ||
 				str[abc - 1] == '{' ||
 				str[abc - 1] == '}' )
-		{
-			str[abc] = str[abc] - 'a' + 'A';
-		}
-		abc++;
+			str[abc] -= 32;
 	}
-
 	return (str);
-}
-
-int main ()
-{
-	char str[];
-	printf("%s\n", str);
-
-	char *result = cap_string(str);
-	printf("%\n", result);
-
-	return (0);
 }
