@@ -11,21 +11,32 @@
 void print_times_table(int n)
 {
 	int a, b;
+	int w = 1;
+	int max_numb = n * n;
 
-	for (n < 0 || n > 15)
+	if (n < 0 || n > 15)
 	{
 		return;
 	}
 
-	for (a = 0; a <= 10; a++)
+	while (max_numb >= 10)
+	{
+		w++;
+		max_numb /= 10;
+	}
+
+	for (a = 0; a <= n; a++)
 	{
 		for (b = 0; b <= 10; b++)
 		{
-			printf("%d\t", a * b);
+			printf("%*d", w, a * b);
+
+			if (b < n)
+			{
+				printf(", ");
+			}
 		}
 
 		printf("\n");
 	}
-
-	return (0);
 }
