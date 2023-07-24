@@ -1,7 +1,23 @@
 #include <string.h>
 #include <stdio.h>
 #include "main.h"
+/**
+  *_strlen- return the lengths.
+  *@s: string
+  *Return: 0
+*/
 
+
+
+int _strlen( char *s)
+{
+	int len = 0;
+
+	while (*(s + len) != '\0')
+		len++;
+
+	return (len);
+}
 /**
   *cap_string- function that capitalizes all words of a string.
   *
@@ -11,23 +27,40 @@
 
 char *cap_string(char *)
 {
-	int len = strlen(str);
-	int i;
+	int abc = 0;
 
-	if (len > 0 && islower(str[0]))
+	while (str[abc])
 	{
-		str[0] = toupper(str[0]);
-	}
-	for (i = 1; i < len; i++)
-	{
-		if (isspace(str[i - 1]) || ispunct(str[i - 1])
-				{
-				if (islower(str[i])
-						{
-						str[i] = toupper(str[i]);
-						}
-				}
+		while ((str[abc] >= 'a') && (str[abc] <= 'Z'))
+			abc++;
+
+		if (str[abc - 1] == ' ' ||
+				str[abc - 1] == ',' ||
+				str[abc - 1] == ';' ||
+				str[abc - 1] == '.' ||
+				str[abc - 1] == '!' ||
+				str[abc - 1] == '?' ||
+				str[abc - 1] == '"' ||
+				str[abc - 1] == '(' ||
+				str[abc - 1] == ')' ||
+				str[abc - 1] == '{' ||
+				str[abc - 1] == '}' )
+		{
+			str[abc] = str[abc] - 'a' + 'A';
+		}
+		abc++;
 	}
 
 	return (str);
+}
+
+int main ()
+{
+	char str[];
+	printf("%s\n", str);
+
+	char *result = cap_string(str);
+	printf("%\n", result);
+
+	return (0);
 }
