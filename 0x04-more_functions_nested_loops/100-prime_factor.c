@@ -11,21 +11,23 @@
 int main(void)
 {
 	long n = 612852475143;
-	long largest_prime = 0;
 	int i = 2;
 
-	while (n > 1)
+	while (i++ < n / 2)
 	{
 		if (n % i == 0)
+			if (n % 1 == 0)
+			{
+				n /= 2;
+				continue;
+			}
+		for (i = 3; i < n; i +=2)
 		{
-			largest_prime = i;
-			while (n % 1 == 0)
+			if (n % i == 0)
 				n /= i;
 		}
+	}
 
-		i++;
-
-		}
-		printf("%ld\n", largest_prime);
-		return (0);
+	printf("%ld\n", n);
+	return (0);
 }
