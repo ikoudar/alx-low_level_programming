@@ -1,5 +1,6 @@
 #include <string.h>
 #include <stdio.h>
+#include <ctype.h>
 #include "main.h"
 /**
   *_strlen- return the lengths.
@@ -7,7 +8,7 @@
   *Return: 0
 */
 
-int _strlen( char *s)
+int _strlen(char *s)
 {
 	int len = 0;
 
@@ -17,13 +18,13 @@ int _strlen( char *s)
 	return (len);
 }
 /**
-  *cap_string- function that capitalizes all words of a string.
+  *cap_string- function that capitalizes all words.
   *
   *
-  *Return: str
+  *Return: str.
 */
 
-char *cap_string(char *)
+char *cap_string(char *str)
 {
 	int abc = 0;
 
@@ -44,7 +45,7 @@ char *cap_string(char *)
 				str[abc - 1] == '(' ||
 				str[abc - 1] == ')' ||
 				str[abc - 1] == '{' ||
-				str[abc - 1] == '}' )
+				str[abc - 1] == '}')
 			str[abc] -= 32;
 	}
 	return (str);
