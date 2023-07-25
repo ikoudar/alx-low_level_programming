@@ -17,7 +17,7 @@ int main(void)
 	for (i <= 97)
 	{
 		fib = a + b;
-		if (i <= 97)
+		if (i < 97)
 		{
 			printf("%lu, ", fib);
 		}
@@ -29,6 +29,7 @@ int main(void)
 		b = fib;
 		i++;
 	}
+
 	printf("\n");
 	return (0);
 }
