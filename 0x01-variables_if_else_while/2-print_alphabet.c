@@ -3,25 +3,16 @@
  * main - entry point to the program
  *
  * Return: 0 on successful execution
-<<<<<<< HEAD
- */
-=======
 */
->>>>>>> 116da1d78d449bee440fcdc4efc31d5c79d74154
+
 int main(void)
 {
-	char letter;
+	int i;
 
-	for (letter = 'a'; letter <= 'z'; letter++)
+	for (i = 97; i <= 122; ++i)
 	{
-		putchar(letter);
+		putchar(i);
+		putchar(10);
 	}
-
-	putchar('\n');
-
 	return (0);
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 116da1d78d449bee440fcdc4efc31d5c79d74154
