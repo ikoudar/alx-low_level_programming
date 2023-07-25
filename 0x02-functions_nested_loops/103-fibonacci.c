@@ -18,7 +18,7 @@ int main(void)
 		b = c;
 
 		if ((a % 2) == 0)
-			sum += 1;
+			sum += a;
 	}
 
 	printf("%ld/n", sum);
