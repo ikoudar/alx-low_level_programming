@@ -7,17 +7,10 @@
 
 int main(void)
 {
-	char alpha;
+	int i;
 
-	for (alpha = 'a'; alpha <= 'm'; alpha++)
-	{
-		putchar(alpha);
-	}
-	for (alpha = 'n'; alpha <= 'z'; alpha++)
-	{
-		putchar(alpha);
-	}
-	putchar('\n');
-
+	for (i = 97; i <= 122; ++i)
+		putchar(i);
+	putchar(10);
 	return (0);
 }
