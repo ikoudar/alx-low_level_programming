@@ -11,9 +11,9 @@ int main(void)
 {
 	int i;
 	int count = 98;
-	unsigned long first = 1;
-	unsigned long second = 2;
-	unsigned long fib;
+	int first = 1;
+	int second = 2;
+	int fib;
 
 	printf("%d, %d", firstn second);
 
