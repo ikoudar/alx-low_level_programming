@@ -9,25 +9,23 @@
 
 int main(void)
 {
-	int i = 0;
-	unsigned long a = 0;
-	unsigned long b = 1;
+	int i;
+	int count = 98;
+	unsigned long first = 1;
+	unsigned long second = 2;
 	unsigned long fib;
 
-	for (i <= 97)
+	printf("%d, %d", firstn second);
+
+	for (i = 2; i < count; i++)
 	{
-		fib = a + b;
-		if (i < 97)
-		{
-			printf("%lu, ", fib);
-		}
-		else
-		{
-			printf("%lu", fib);
-		}
-		a = b;
-		b = fib;
-		i++;
+		fib = first + second;
+
+		printf(", ");
+		printf("%d", fib);
+
+		first = second;
+		second = fib;
 	}
 
 	printf("\n");
