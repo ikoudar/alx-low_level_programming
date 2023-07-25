@@ -9,25 +9,26 @@
 
 int main(void)
 {
-	int i;
-	int count = 98;
-	int first = 1;
-	int second = 2;
-	int fib;
+	int counter = 0;
+	unsigned long first = 0;
+	unsigned long second = 1;
+	unsigned long fib;
 
-	printf("%d, %d", firstn second);
-
-	for (i = 2; i < count; i++)
+	while (counter <= 97)
 	{
 		fib = first + second;
-
-		printf(", ");
-		printf("%d", fib);
-
+		if (counter < 97)
+		{
+			printf("%lu, ", fib);
+		}
+		else
+		{
+			printf("%lu", fib);
+		}
 		first = second;
 		second = fib;
+		counter++;
 	}
-
 	printf("\n");
 	return (0);
 }
