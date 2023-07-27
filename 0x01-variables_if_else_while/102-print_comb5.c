@@ -1,34 +1,31 @@
 #include <stdio.h>
 
 /**
- * main - entry point to the program.
+ * main - entry point
  *
- * Return: 0 for successful execution
-*/
-
+ * Return: always 0
+ */
 int main(void)
 {
-	int a, b;
+	int c, c_two;
 
-	for (a = 0; a <= 99; a++)
+	for (c = 0; c <= 98; c++)
 	{
-		for (b = a + 1; b <= 99; b++)
+		for (c_two = c + 1; c_two <= 99; c_two++)
 		{
-			putchar(a / 10 + '0');
-			putchar(a % 10 + '0');
-			putchar(' ');
-			putchar(b / 10 + '0');
-			putchar(b % 10 + '0');
-
-			if (a / 10 != 9 || b % 10 != 8)
+			putchar('0' + c / 10);
+			putchar('0' + c % 10);
+			putchar(32);
+			putchar('0' + c_two / 10);
+			putchar('0' + c_two % 10);
+			if (c / 10 != 9 || c % 10 != 8)
 			{
-				putchar(',');
-				putchar(' ');
+				putchar(44);
+				putchar(32);
 			}
 		}
 	}
 
-	putchar('\n');
-
+	putchar(10);
 	return (0);
 }
