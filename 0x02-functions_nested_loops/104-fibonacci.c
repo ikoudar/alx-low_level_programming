@@ -1,12 +1,10 @@
 #include <stdio.h>
 
 /**
-  *main- the entry point to the program.
-  *
-  *fibonacci suit numbers.
-  *Return: 0
-*/
-
+ * main - Entry point, prints the first 50 fibonacci numbers
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
 	int counter = 0;
