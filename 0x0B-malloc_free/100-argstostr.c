@@ -9,14 +9,14 @@
  */
 int len(char *str)
 {
-    int length = 0;
+	int length = 0;
 
-    if (str != NULL)
-    {
-        while (str[length])
-            length++;
-    }
-    return (length);
+	if (str != NULL)
+	{
+		while (str[length])
+			length++;
+	}
+	return (length);
 }
 
 /**
@@ -28,33 +28,32 @@ int len(char *str)
  */
 char *argstostr(int ab, char **yz)
 {
-    char *new_string = NULL;
-    int x = 0, i = ab, j, sum = 0, temp = 0;
+	char *new_string = NULL;
+	int x = 0, i = ab, j, sum = 0, temp = 0;
 
-    if (ab == 0 || yz == NULL)
-        return (NULL);
+	if (ab == 0 || yz == NULL)
+		return (NULL);
 
-    while (ab--)
-        sum += (len(yz[ab]) + 1);
+	while (ab--)
+		sum += (len(yz[ab]) + 1);
 
-    new_string = (char *)malloc(sum + 1);
+	new_string = (char *)malloc(sum + 1);
 
-    if (new_string != NULL)
-    {
-        while (x < i)
-        {
-            for (j = 0; yz[x][j] != '\0'; j++)
-                new_string[j + temp] = yz[x][j];
-            new_string[temp + j] = '\n';
-            temp += (j + 1);
-            x++;
-        }
-        new_string[temp] = '\0';
-    }
-    else
-    {
-        return (NULL);
-    }
-    return (new_string);
+	if (new_string != NULL)
+	{
+		while (x < i)
+		{
+			for (j = 0; yz[x][j] != '\0'; j++)
+				new_string[j + temp] = yz[x][j];
+			new_string[temp + j] = '\n';
+			temp += (j + 1);
+			x++;
+		}
+		new_string[temp] = '\0';
+	}
+	else
+	{
+		return (NULL);
+	}
+	return (new_string);
 }
-
