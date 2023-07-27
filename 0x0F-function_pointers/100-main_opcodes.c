@@ -3,40 +3,34 @@
 /**
   *main- the entry point to the program.
   *
-  *print_opcodes- program print codes.
-  *@num_bytes: number of bytes
+  *@argv: argement v
+  *@argc: argement c
   *Return: 0
 */
-void print_opcodes(int num_bytes)
-{
-	unsigned char *main_ptr = (unsigned char *)print_opcodes;
-
-	int i = 0;
-
-	for (i = 0; i < num_bytes; i++)
-	{
-		printf("%02x", *(main_ptr + i));
-	}
-	printf("\n");
-}
-
 int main(int argc, char *argv[])
 {
+	unsigned char *s;
+	int i = 0, bytes;
+
 	if (argc != 2)
 	{
-		printf("Error: Incorrect number of arguments.\n");
-		return (1);
+		printf("Error\n");
+		exit(1);
 	}
-
-	int num_bytes = atoi(argv[1]);
-
-	if (num_bytes <= 0)
+	if (atoi(argv[1]) < 0)
 	{
-		printf("Error: Number of bytes must be positive.\n");
-		return (2);
+		printf("Error\n");
+		exit(2);
 	}
-
-	print_opcodes(num_bytes);
+	s = (unsigned char *) main;
+	bytes = atoi(argv[1]);
+	for (; i < bytes; i++)
+	{
+		printf("%02x", *(s + i));
+		if (i != bytes - 1)
+			printf(" ");
+	}
+	printf("\n");
 
 	return (0);
 }
