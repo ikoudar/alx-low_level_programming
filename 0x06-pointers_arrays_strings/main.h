@@ -27,4 +27,14 @@ char *leet(char *);
 
 char h(char s);
 
+char *rot13(char *str);
+
+char h_2(char s);
+
+void print_number(int n);
+
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
+
+void print_buffer(char *b, int size);
+
 #endif
