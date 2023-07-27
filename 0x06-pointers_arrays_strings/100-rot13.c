@@ -11,39 +11,23 @@
 
 char *rot13(char *str)
 {
-	int i = 0;
+	char one[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char two[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int i, j;
 
-	while (str[i] != '\0')
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		str[i] = h_2(str[i]);
-		i++;
-	}
+		char replacement = str[i];
 
-	return (str);
-}
-
-/**
-  *h_2- helper
-  *@s: charater
-  *
-  *Return: J
-*/
-
-char h_2(char s)
-{
-	char a[52] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char b[52] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-
-	char j = s;
-
-	while (i < 52)
-	{
-		if (s == a[i])
+		for (j = 0; j < 52; j++)
 		{
-			j = b[i];
-			break;
+			if (str[i] == one[j])
+			{
+				replacement = two[j];
+				break;
+			}
 		}
-		i++;
+		str[i] = replacement;
 	}
-	return (j);
+	return (str);
 }
