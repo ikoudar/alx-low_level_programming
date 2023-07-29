@@ -1,13 +1,6 @@
 global main
-
-
-section .data
-msg: db "hello, holberton", 10
-msglen: equ $ - msg
-
 section .text
-extern printf
-
+	extern printf
 main:
 
 mov rax, 1
@@ -20,3 +13,6 @@ mov rax, 60
 mov rdi, 0
 syscall
 
+section .rodata
+msg: db "Hello, Holberton", 10
+msglen: equ $ - msg
