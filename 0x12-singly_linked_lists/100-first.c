@@ -1,15 +1,14 @@
 #include "lists.h"
 #include <stdio.h>
 
+void print_li(void)__attribute__((constructor));
 /**
-  *print_line- function that prints line.
-  *
-  *
+  *print_li- function that prints line before the main.
   *
 */
 
-void print_line(void)
+void print_li(void)
 {
-	printf("You're beat! and yet, you must allow,\n"
-			"I bore my house upon my back!\n");
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
