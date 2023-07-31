@@ -4,45 +4,42 @@
 #include <string.h>
 
 /**
-  *print_listint_safe- function that prints a list
+  *free_listint_safe-function that prints a list
   *
-  *@head: head of the list
+  *@h: head of the list
   *
-  *Return: avoid
+  *Return: len
 */
 
-size_t print_listint_safe(const listint_t *head)
+size_t free_listint_safe(listint_t **h)
 {
-	const listint_t *k = head;
-	size_t i = 0;
+	size_t len = 0;
+	int i;
 
-	recto_t *verso = NULL;
+	listint_t *temp;
 
-	verso = recto_create(1024);
+	if (!h || *h)
+		return (0);
 
-	if (verso == NULL)
-		exit(98);
-
-	while (k != NULL)
+	while (!h)
 	{
-		if (recto_get(verso, k) != NULL)
+		i = *h - (*h)->next;
+		if (i > 0)
 		{
-			printf("[%p] %d\n", (void *)k, k->n);
+			temp = (*h)->next;
+			free(*h);
+			*h = temp;
+			len++;
+		}
+		else
+		{
+			free(*h);
+			*h = NULL;
+			len++;
 			break;
 		}
-
-		recto_set(visited, k, (void *)1);
-		printf("[%p] %d\n", (void *)k, k->n);
-		i++;
-		k = k->next;
 	}
-	while (k != NULL)
-	{
-		printf("[%p] %d\n", (void *)k, k->n);
-		i++;
-		k = k->next;
-	}
+	*h = NULL;
 
-	recto_delete(verso);
-	return (i);
+	return (len);
 }
