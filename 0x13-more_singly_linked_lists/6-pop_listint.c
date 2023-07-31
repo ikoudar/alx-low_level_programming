@@ -13,17 +13,18 @@
 
 int pop_listint(listint_t **head)
 {
-	listint_t *bip;
+	listint_t *temp;
 	int i;
 
-	if (*head == NULL)
+
+	if (head == NULL || *head == NULL)
 		return (0);
 
-	bip = *head;
-	i = bip->n;
-	free(bip);
+	temp = *head;
+	i = temp->n;
 
 	*head = (*head)->next;
-	return (i);
-}
+	free(temp);
 
+    return (i);
+}
