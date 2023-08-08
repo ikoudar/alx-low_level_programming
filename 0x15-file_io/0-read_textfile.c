@@ -1,20 +1,20 @@
 #include "main.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
   *read_textfile- function that reads a text file and prints it to the POSIX.
   *
   *@filename: file to be read
   *@letters: numbers of letters
   *
-  *Return: w
+  *Return: wrote
 */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf;
 	ssize_t fd;
-	ssize_t w;
+	ssize_t wrote;
 	ssize_t t;
 
 	fd = open(filename, O_RDONLY);
@@ -23,9 +23,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	buf = malloc(sizeof(char) * letters);
 	t = read(fd, buf, letters);
-	w = write(STDOUT_FILENO, buf, t);
+	wrote = write(STDOUT_FILENO, buf, t);
 
 	free(buf);
-	close (fd);
-	return (w);
+	close(fd);
+	return (wrote);
 }
