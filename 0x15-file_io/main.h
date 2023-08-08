@@ -13,7 +13,9 @@ int create_file(const char *filename, char *text_content);
 
 int append_text_to_file(const char *filename, char *text_content);
 
+void check_IO_stat(int stat, int fd, char *filename, char mode);
 
+int main(int argc, char *argv[]);
 
 
 #endif
