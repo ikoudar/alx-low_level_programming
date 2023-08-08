@@ -31,7 +31,7 @@ char *create_buf(char *file)
 /**
   *close_file- close file.
   *
-  *@_file: file to be closed.
+  *@fd: file to be closed.
   *
 */
 
@@ -83,6 +83,7 @@ int main(int argc, char *argv[])
 		r = read(from, buf, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
 	}
+
 	while (r > 0);
 	free(buf);
 	close_file(from);
