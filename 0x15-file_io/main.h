@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -14,11 +15,8 @@ int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
 
 
+void new_buffer(int stat, int fd, char *filename, char file);
 int main(int argc, char *argv[]);
-
-char *create_buf(char *file);
-
-void close_file(int fd);
 
 
 #endif
